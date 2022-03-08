@@ -1,0 +1,8 @@
+# hyper-parameters
+MEMORY_CAPACITY = 1000
+C = 50
+BATCH_SIZE = 32
+LR = 0.01
+GAMMA = 0.90
+EPISILO = 0.9
+TEST_EPISODE = 30
