@@ -27,6 +27,7 @@ ValuesView(├──CartPole: [ v0, v1 ]
 from DQN import DQN
 from doubleDQN import DoubleDQN
 from duelingDQN import D3QN
+from perDQN import PerDQN
 from settings import *
 
 import time
@@ -44,7 +45,7 @@ NUM_ACTIONS = env.action_space.n
 NUM_STATES = env.observation_space.shape[0]
 ENV_A_SHAPE = 0 if isinstance(env.action_space.sample(), int) else env.action_space.sample.shape
 
-RL = D3QN(n_action=NUM_ACTIONS, n_state=NUM_STATES, learning_rate=0.01)  # choose algorithm
+RL = PerDQN(n_action=NUM_ACTIONS, n_state=NUM_STATES, learning_rate=0.01)  # choose algorithm
 
 total_steps = 0
 for episode in range(1000):
